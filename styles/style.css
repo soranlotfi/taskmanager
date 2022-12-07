@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/vazir.eot"), "eot";
+  src: url("../fonts/vazir.ttf"), "ttf";
+  src: url("../fonts/vazir.woff"), "woff";
+  src: url("../fonts/vazir.woff2"), "woff2";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+    padding: 1rem ;
+}
+
+body {
+  font-family: "vazir";
+  direction: rtl;
+}
+
+/*  */
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background: rgb(0, 36, 33);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 36, 33, 1) 0%,
+    rgba(9, 104, 121, 1) 0%,
+    rgba(8, 95, 130, 1) 16%,
+    rgba(51, 217, 233, 1) 67%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+  background-color: #ccc;
+}
+
+.taskmanager-container{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    box-shadow: 4px 4px 30px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.taskmanager {
+  flex-basis: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.taskmanager .header {
+    padding: 1.5rem 0;
+  text-align: right;
+}
+
+.taskmanager .body .form .inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.taskmanager .body .form .inputs1{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+}
+
+.taskmanager .body .form .inputs .textarea{
+    flex-basis: 50%;
+
+}
+
+
+
+.taskmanager .body .form .inputs .inputs1 input,
+.taskmanager .body .form .inputs .textarea textarea{
+    font-family: 'vazir';
+    margin: 0.5rem 0;
+    resize: none;
+    border: 1px solid rgb(123, 123, 123);
+    padding: 0.3rem 0.2rem ;
+    width: 100%;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.taskmanager .body .form .inputs input:focus,
+.taskmanager .body .form .inputs textarea:focus{
+    outline: 1px solid rgb(27, 125, 186);
+}
+
+.taskmanager .body .form .buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.taskmanager .body .form .buttons button{
+    margin:1rem 0;
+    margin-right: 1.1rem;
+    width: 100px;
+    padding: 0.5rem 0;
+    font-family: 'vazir';
+    border: none;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+}
+
+.taskmanager .body .form .buttons button:hover{
+    color: 000;
+    background-color: #ccc;
+}
+
+.taskSubmit{
+    color: #fff;
+    background-color:#1C6758 ;
+}
+.taskClear{
+    color: #fff;
+    background-color: #CF0A0A;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 50%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.footer .task{
+    flex-basis: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    /* height: 200px; */
+}
+
+.footer .task:hover{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
