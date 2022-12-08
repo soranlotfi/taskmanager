@@ -10,6 +10,16 @@
 
 <body>
     <section class="taskmanager-container">
+        <div class="overlay" id="overlay">
+            <div id = modal-bar></div>
+            <div class="overlay-modal">
+                <h1>از حذف یادداشت مطمئنی؟</h1>
+               <div class="modal-btns">
+                <button id="modal-btn-yes">بله</button>
+                <button id="modal-btn-no">خیر</button>
+               </div>
+            </div>
+        </div>
         <div class="taskmanager">
             <div class="container">
                 <div class="header">
@@ -20,32 +30,52 @@
                 <div class="body">
                     <form class="form">
                         <div class="inputs">
-                           <div class="inputs1">
-                            <input type="text" class="taskName" id="taskName" placeholder="نام فعالیت">
-                            <input type="number" class="taskStart" id="taskStart" placeholder="ساعت آغاز">
-                            <input type="number" class="taskEnd" id="taskEnd" placeholder="ساعت پایان">
-                           </div>
-                           <div class="textarea">
-                            <textarea name="taskInfo" id="taskInfo" cols="20" rows="5" placeholder="توضیحات"></textarea>
-                           </div>
+                            <div class="inputs1">
+                                <input type="text" class="taskName" id="taskName" placeholder="نام فعالیت">
+                                <input type="number" class="taskStart" id="taskStart" placeholder="ساعت آغاز">
+                                <input type="number" class="taskEnd" id="taskEnd" placeholder="ساعت پایان">
+                            </div>
+                            <div class="textarea">
+                                <textarea name="taskInfo" id="taskInfo" cols="20" rows="5"
+                                    placeholder="توضیحات"></textarea>
+                            </div>
                         </div>
                         <div class="buttons">
-                            <button type="button" class="taskSubmit" id="taskSubmit">تایید</button>
-                            <button type="button" class="taskClear" id="taskClear">پاکسازی</button>
+                            <button type="button" class="taskSubmit form-btn" id="taskSubmit">تایید</button>
+                            <button type="button" class="taskClear form-btn" id="taskClear">پاکسازی</button>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
         <div class="footer">
             <!-- <div class="task">
                 <h3 class="task-title">تماشای فوتبال</h4>
-                <h4 class="taskStart">ساعت 22 الی 00:00</h4>
-                <p class="taskCaption">بازی فوتبال تیم های اسپانیا و مراکش </p>
-                <div class="task-footer">
-                    <button type="button" id="taskEdit" class="taskEdit">ویرایش</button>
-                    <button type="button" id="taskdelete" class="taskEdit">حذف</button>
-                </div>
+                    <h4 class="taskStart">ساعت 22 الی 00:00</h4>
+                    <p class="taskCaption">بازی فوتبال تیم های اسپانیا و مراکش </p>
+                    <div class="task-footer">
+                        <button type="button" id="taskEdit" class="taskEdit">ویرایش</button>
+                        <button type="button" id="taskdelete" class="taskEdit">حذف</button>
+                    </div>
+            </div>
+            <div class="task">
+                <h3 class="task-title">تماشای فوتبال</h4>
+                    <h4 class="taskStart">ساعت 22 الی 00:00</h4>
+                    <p class="taskCaption">بازی فوتبال تیم های اسپانیا و مراکش </p>
+                    <div class="task-footer">
+                        <button type="button" id="taskEdit" class="taskEdit">ویرایش</button>
+                        <button type="button" id="taskdelete" class="taskEdit">حذف</button>
+                    </div>
+            </div>
+            <div class="task">
+                <h3 class="task-title">تماشای فوتبال</h4>
+                    <h4 class="taskStart">ساعت 22 الی 00:00</h4>
+                    <p class="taskCaption">بازی فوتبال تیم های اسپانیا و مراکش </p>
+                    <div class="task-footer">
+                        <button type="button" id="taskEdit" class="taskEdit">ویرایش</button>
+                        <button type="button" id="taskdelete" class="taskEdit">حذف</button>
+                    </div>
             </div> -->
         </div>
     </section>
