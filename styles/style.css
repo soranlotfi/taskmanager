@@ -21,31 +21,41 @@ a {
     padding: 1rem ;
 }
 
-body {
-  font-family: "vazir";
-  direction: rtl;
+button{
+  font-family: 'vazir';
+  border-radius: .2rem;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover{
+  color: #000 !important;
+  background-color: rgb(232, 229, 229) !important;
 }
 
 /*  */
 
 body {
+  font-family: "vazir" ;
+  direction: rtl;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* background: rgb(0, 36, 33);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 36, 33, 1) 0%,
-    rgba(9, 104, 121, 1) 0%,
-    rgba(8, 95, 130, 1) 16%,
-    rgba(51, 217, 233, 1) 67%,
-    rgba(0, 212, 255, 1) 100%
-  ); */
   background-color: #ccc;
 }
 
+/* taskmanager body styles */
 .taskmanager-container{
     background-color: #fff;
     border-radius: 0.5rem;
@@ -72,7 +82,9 @@ body {
   text-align: right;
 }
 
-.taskmanager .body .form .inputs{
+/* task manager form and inputs styles */
+
+.inputs{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,21 +92,19 @@ body {
     flex-wrap: wrap;
 }
 
-.taskmanager .body .form .inputs1{
+ .inputs1{
     display: flex;
     flex-direction: column;
     flex-basis: 45%;
 }
 
-.taskmanager .body .form .inputs .textarea{
+ .textarea{
     flex-basis: 50%;
 
 }
 
-
-
-.taskmanager .body .form .inputs .inputs1 input,
-.taskmanager .body .form .inputs .textarea textarea{
+ .inputs .inputs1 input,
+ .inputs .textarea textarea{
     font-family: 'vazir';
     margin: 0.5rem 0;
     resize: none;
@@ -113,65 +123,50 @@ body {
     -o-transition: all .3s ease-in-out;
 }
 
-.taskmanager .body .form .inputs input:focus,
-.taskmanager .body .form .inputs textarea:focus{
+.inputs input:focus,
+.inputs textarea:focus{
     outline: 1px solid rgb(27, 125, 186);
 }
 
-.taskmanager .body .form .buttons{
+ .addForm .buttons,
+ .editForm .buttons
+ {
     display: flex;
     justify-content: flex-end;
 }
 
- .taskmanager .body .form .buttons button{
+  .addForm .buttons button,
+  .editForm .buttons button{
     margin:1rem 0;
     margin-right: 1.1rem;
     width: 100px;
     padding: 0.5rem 0;
-    font-family: 'vazir';
-    border: none;
-    border-radius: 0.2rem;
-    -webkit-border-radius: 0.2rem;
-    -moz-border-radius: 0.2rem;
-    -ms-border-radius: 0.2rem;
-    -o-border-radius: 0.2rem;
-    cursor: pointer;
     font-size: 1rem;
-    transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
 }
 
-.taskmanager .body .form .buttons button:hover{
-    color: 000;
-    background-color: #ccc;
-}
 
 .taskSubmit{
-    color: #fff;
     background-color:#1C6758 ;
 }
+
 .taskClear{
-    color: #fff;
     background-color: #CF0A0A;
 }
 
+/* tasks section styles */
 .footer{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    /* justify-content: space-around; */
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space:nowrap;
     scroll-behavior: smooth;
-    /* width: 400px; */
-    padding: 2rem 3rem;
+    padding: 2rem .5rem;
 }
 
 .footer .task{
-    flex-basis: 70%;
+    flex-basis: 100% !important;
     border: 1px solid #ccc;
     margin: 0.5rem;
     padding: 1rem;
@@ -184,8 +179,7 @@ body {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     cursor: pointer;
-    height: auto;
-    
+    vertical-align: top;
 }
 
 .footer .task:hover{
@@ -197,6 +191,7 @@ body {
   border-bottom: 1px solid #ccc;
   width: 100%;
   margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
 }
 
 .task h4{
@@ -207,32 +202,61 @@ body {
 .task p{
   font-size: .9rem;
   padding: 0.5rem 0;
-  color: ;
+  width: 100%;
+  word-wrap: break-all;
+  white-space: pre-wrap;
+  text-align: justify;
+  transition: all .3s ease-in-out ;
+  -webkit-transition: all .3s ease-in-out ;
+  -moz-transition: all .5s ease-in-out ;
+  -ms-transition: all .3s ease-in-out ;
+  -o-transition: all .3s ease-in-out ;
+  transform-origin: top;
+  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  opacity: 0;
+}
+
+.tra{
+  transform: translateY(0) !important;
+  -webkit-transform: translateY(0) !important;
+  -moz-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  -o-transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.task p:hover{
+  display: block;
+}
+
+.taskBtns{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.taskBtn{
+  color: #fff;
+  padding: 0.5rem 1rem;
+  width: 100px;
+  margin-right: 0.5rem;
 }
 
 .dltBtn{
   background-color: #CF0A0A;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  cursor: pointer;
-  border: none;
-  font-family: 'vazir';
-  border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  -moz-border-radius: 0.2rem;
-  -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
-  width: 100px;
 }
-.dltBtn:hover{
-  background-color: rgb(146, 146, 146);
-  color: #000;
+
+.edtBtn{
+  background-color: #1C6758;
 }
+
+
+/* delete confirm sections with a modal */
 
 .overlay{
   position: absolute;
@@ -240,7 +264,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -262,6 +286,23 @@ body {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  border-radius: .3rem;
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
+}
+
+#modal-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4%;
+  content: "";
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  rgba(56,51,233,1) 57%, rgba(237,42,223,1) 76%, rgba(0,229,255,1) 100%);
+  z-index: 10;
 }
 
 .overlay-modal .modal-btns{
@@ -294,21 +335,6 @@ body {
   background-color: #CF0A0A;
 }
 
-button{
-  transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-
-}
-
-button:hover{
-  color: #000 !important;
-  background-color: rgb(232, 229, 229) !important;
-}
-
-
 
 @keyframes width {
   0% {
@@ -328,19 +354,27 @@ button:hover{
   }
 }
 
-
-#modal-bar{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1%;
-  content: "";
-  background-color: #CF0A0A;
-  z-index: 10;
+.modalAnimation{
+  animation: width 5.1s linear 0s  alternate;
+  -webkit-animation: width 5.1s linear 0s  alternate;
 }
 
-.modalAnimation{
-  animation: width 5s linear 0s  alternate;
-  -webkit-animation: width 5s linear 0s  alternate;
+/* edit form styles */
+.editForm{
+  width: 90%;
+}
+.editForm .editFormInputs{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/*dark-theme */
+
+#editOverlay{
+  scale: 0;
+
 }
