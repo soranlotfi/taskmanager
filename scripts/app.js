@@ -135,7 +135,6 @@ var switchBtn = document.getElementById("dark");
 // var white = document.getElementById("white");
 
 switchBtn.addEventListener("click", function switchM (event)  {
-  event.target.
   if (switchBtn.id == "dark") {
     link = document.createElement("link");
     link.rel = "stylesheet";
