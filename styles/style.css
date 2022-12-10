@@ -10,6 +10,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
 }
 
 a {
@@ -33,14 +38,14 @@ button{
   -moz-border-radius: .2rem;
   -ms-border-radius: .2rem;
   -o-border-radius: .2rem;
-  color: #fff;
+  color: #ccc;
   cursor: pointer;
   border: none;
 }
 
 button:hover{
   color: #000 !important;
-  background-color: rgb(232, 229, 229) !important;
+  background-color: #00A8CC!important;
 }
 
 /*  */
@@ -53,6 +58,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ccc;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
 }
 
 /* taskmanager body styles */
@@ -70,6 +80,7 @@ body {
     flex-direction: column;
     max-width: 600px;
     position: relative;
+
 }
 
 .taskmanager {
@@ -81,6 +92,20 @@ body {
     padding: 1.5rem 0;
   text-align: right;
 }
+
+.taskmanager .header .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskmanager .header .title button{
+  padding: .5rem 1rem;
+  background: #00A8CC;
+  color: #fff;
+}
+
+
 
 /* task manager form and inputs styles */
 
@@ -108,7 +133,7 @@ body {
     font-family: 'vazir';
     margin: 0.5rem 0;
     resize: none;
-    border: 1px solid rgb(123, 123, 123);
+    /* border: 1px solid #1597BB; */
     padding: 0.3rem 0.2rem ;
     width: 100%;
     border-radius: 0.2rem;
@@ -121,6 +146,7 @@ body {
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
+    /* background: transparent; */
 }
 
 .inputs input:focus,
@@ -178,8 +204,13 @@ body {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    border-radius: 0.2rem;
     cursor: pointer;
     vertical-align: top;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
 }
 
 .footer .task:hover{
@@ -212,22 +243,9 @@ body {
   -ms-transition: all .3s ease-in-out ;
   -o-transition: all .3s ease-in-out ;
   transform-origin: top;
-  transform: translateY(-100px);
-  -webkit-transform: translateY(-100px);
-  -moz-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  -o-transform: translateY(-100px);
-  opacity: 0;
 }
 
-.tra{
-  transform: translateY(0) !important;
-  -webkit-transform: translateY(0) !important;
-  -moz-transform: translateY(0) !important;
-  -ms-transform: translateY(0) !important;
-  -o-transform: translateY(0) !important;
-  opacity: 1 !important;
-}
+
 
 .task p:hover{
   display: block;
@@ -371,10 +389,19 @@ body {
   flex-wrap: wrap;
 }
 
-
+.editForm .editFormInputs .inputs{
+  flex-basis: ;
+}
 /*dark-theme */
 
-#editOverlay{
-  scale: 0;
 
+
+.light-btn{
+  color: #fff !important;
+  background-color: #00A8CC !important;
+}
+
+.dark-btn{
+  color: #000 !important;
+  background-color:#F8F988 !important;
 }

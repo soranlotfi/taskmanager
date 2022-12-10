@@ -1,0 +1,64 @@
+body{
+    background-color: #282A3A;
+  }
+
+.taskmanager-container{
+    background-color: #0f082c;
+    box-shadow: .5px .5px 10px .5px #00A8CC;
+  }
+  
+  .taskmanager{
+    border-bottom:1px solid  #1597BB;
+  }
+  
+  .taskmanager .header .title h1{
+    color: #1cb4ff;
+  }
+  
+  .inputs .inputs1 input,
+  .inputs .textarea textarea{
+    border: 1px solid #1597BB;
+    color: #1597BB !important;
+  }
+  
+  .footer .task{
+    flex-basis: 100% !important;
+    border: 1px solid #FF1E56;
+    background: #363062;
+  }
+  
+  .footer .task:hover{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+    
+  } 
+  
+  .inputs .inputs1 input,
+  .inputs .textarea textarea{
+     border: 1px solid #1597BB;
+     background: transparent;
+     color: #ccc;
+  }
+  
+  
+  .footer .task{
+    border: 1px solid #00A8CC;
+  
+  }
+  
+  .footer .task:hover{
+    box-shadow: 4px 4px 5px 4px #00A8CC;
+    
+  }
+  
+  .task h3{
+  color: #00A8CC;
+  border-bottom: 1px solid #00A8CC;
+  }
+  
+  .task h4{
+  color: #4ad9c1;
+  padding: 0.5rem 0;
+  }
+  .task p{
+    color:#e81c6f;
+  }
